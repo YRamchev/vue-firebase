@@ -1,55 +1,86 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="page-wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <nuxt-link :to="{name: 'index'}">
+          <img src="/logo.png" alt="">
+        </nuxt-link>
+      </div>
+      <nav class="nav-wrapper">
+        <ul class="nav">
+          <li class="nav__item">
+            <nuxt-link :to="{name: 'index'}" class="nav__link">
+              My Work
+            </nuxt-link>
+          </li>
+          <li class="nav__item">
+            <nuxt-link :to="{name: 'shop'}"  class="nav__link">
+              Shop
+            </nuxt-link>
+          </li>
+          <li class="nav__item">
+            <nuxt-link :to="{name: 'about'}" class="nav__link">
+              About Me
+            </nuxt-link>
+          </li>
+          <li class="nav__item">
+            <nuxt-link :to="{name: 'contacts'}" class="nav__link">
+              Contact Me
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <nuxt />
+    </main>  
+      
+    <footer class="footer">
+
+    </footer>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<style scoped>
+  html {
+    font-size: 100%;
+  }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+  .header__logo img {
+    max-width: 128px;
+  }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .nav {
+    display: flex;
+    list-style-type: none;
+  }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  .nav__link {
+    display: block;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    position: relative;
+    color: rgba(0, 0, 0, .57)
+  }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
+  .nav__link.nuxt-link-active,
+  .nav__link:hover {
+    color: rgba(0, 0, 0, .87)
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    padding: 4rem 0;
+  }
 </style>

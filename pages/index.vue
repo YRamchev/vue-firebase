@@ -1,72 +1,76 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        vue-firebase
-      </h1>
-      <h2 class="subtitle">
-        My neat Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <PaintingList :paintings="paintings"/>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import PaintingList from '../components/PaintingList'
 
 export default {
   components: {
-    Logo
+    PaintingList
+  },
+
+  data () {
+    return {
+      paintings: [
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        },
+        {
+          title: 'Some Title',
+          images: ['https://dvqlxo2m2q99q.cloudfront.net/000_clients/400941/page/h800-400941MtGIKL9Z.jpg', '', '', ''],
+          description: 'lorem',
+          isInstock: true
+        }
+      ]
+    }
   }
 }
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
